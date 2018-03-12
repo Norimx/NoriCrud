@@ -2,7 +2,7 @@
 PHP/Mysqli Crud for rapid prototyping
 
 ### Usage
-```
+```php
   <?php
   
   $query = $db->query("SELECT title FROM posts ORDER BY title DESC");
