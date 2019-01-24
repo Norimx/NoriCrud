@@ -8,7 +8,7 @@
 $dbHost = 'localhost';
 $dbUsername = 'user';
 $dbPassword = 'pass';
-$dbName = 'db_name;
+$dbName = 'db_name';
 
 //Connect and select the database
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
