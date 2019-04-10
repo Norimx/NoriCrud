@@ -13,8 +13,8 @@ PHP/Mysqli Crud for rapid prototyping
               echo $row[title];
           endwhile;
    endif;
-   
-   $db->query("UPDATE post SET title=Updated WHERE id = {ID}");
+   // $db->query("UPDATE post SET title=Updated WHERE id = {ID}");
+   $db->query("INSERT INTO post SET title={$title},content={$content}");
 
    echo $db->query("SELECT title FROM posts WHERE id = {ID}")->fetch_object()->title;
 
