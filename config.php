@@ -21,6 +21,10 @@ mb_internal_encoding('UTF-8');
 
 //Site Details
 define('ROOT', __DIR__);
+define('HOME', 'https://example.com');
+define('ADM', HOME.'/admin');
+define('LOGO', HOME.'/img/logo.png');
+define('COPY','Copyright &copy;'.date('Y'));
 
 //Routes
 /*
