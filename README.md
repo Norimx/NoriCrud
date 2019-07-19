@@ -4,6 +4,9 @@ PHP/Mysqli Crud for rapid prototyping
 ### Usage
 ```php
   <?php
+  //Include the config
+  include_once('config.php');
+  
   //Example List
   $query = $db->query("SELECT title FROM posts ORDER BY title DESC");
   $rowCount = $query->num_rows;  
@@ -13,6 +16,8 @@ PHP/Mysqli Crud for rapid prototyping
               echo $row[title];
           endwhile;
    endif;
+   
+   
    //Example Table
   $query = $db->query("SELECT * FROM posts ORDER BY id ASC");
   $rowCount = $query->num_rows;  
@@ -32,8 +37,11 @@ PHP/Mysqli Crud for rapid prototyping
    endif;
    echo "<table><tr>$head</tr>$rows</table>";
    
+   
+   
    //Example Update
    $db->query("UPDATE post SET title=Updated WHERE id = {ID}");
+   
    //Example Insert
    $db->query("INSERT INTO post SET title={$title},content={$content}");
 
