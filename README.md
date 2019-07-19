@@ -7,6 +7,9 @@ PHP/Mysqli Crud for rapid prototyping
   //Include the config
   include_once('config.php');
   
+  //Example single item
+  echo $db->query("SELECT title FROM posts WHERE id = {ID}")->fetch_object()->title;
+  
   //Example List
   $query = $db->query("SELECT title FROM posts ORDER BY title DESC");
   $rowCount = $query->num_rows;  
@@ -44,8 +47,6 @@ PHP/Mysqli Crud for rapid prototyping
    
    //Example Insert
    $db->query("INSERT INTO post SET title={$title},content={$content}");
-
-   echo $db->query("SELECT title FROM posts WHERE id = {ID}")->fetch_object()->title;
 
   ?>
 ```
